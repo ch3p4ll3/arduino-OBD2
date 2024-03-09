@@ -115,7 +115,7 @@ public:
   OBD2Class();
   virtual ~OBD2Class();
 
-  int begin();
+  int begin(double baudrate = 500E3);
   void end();
 
   bool pidSupported(uint8_t pid);

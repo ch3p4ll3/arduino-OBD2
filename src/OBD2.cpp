@@ -337,9 +337,9 @@ OBD2Class::~OBD2Class()
 {
 }
 
-int OBD2Class::begin()
+int OBD2Class::begin(double baudrate)
 {
-  if (!CAN.begin(500E3)) {
+  if (!CAN.begin(baudrate)) {
     return 0;
   }
 
